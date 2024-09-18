@@ -1,0 +1,3 @@
+[submodule "design/django-uswds"]
+	path = design/django-uswds
+	url = https://github.com/ChrisCompton/django-uswds.git

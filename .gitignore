@@ -1,0 +1,5 @@
+.foundry/
+*.pyc
+.DS_Store
+__pycache__/
+*.sqlite3
