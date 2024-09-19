@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+
+    "django_uswds",
 ]
 
 MIDDLEWARE = [
@@ -54,7 +56,7 @@ ROOT_URLCONF = "design.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['design/templates','django-uswds/templates'],
+        "DIRS": ['design/templates','django_uswds/templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -118,7 +120,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
-    ("uswds", BASE_DIR / "django-uswds/vendor/dist")
+    ("uswds", BASE_DIR / "django_uswds/vendor/dist")
 ]
 
 
