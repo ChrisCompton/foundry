@@ -24,4 +24,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path("admin/", admin.site.urls),
     path("uswds/demo", uswds_views.demo, name="demo"),
+    path("examples/form", views.demo_form, name="demo_form"),
 ]

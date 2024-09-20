@@ -1,0 +1,83 @@
+{% extends 'uswds.html' %}
+
+{% block title %}
+Foundry
+{% endblock title %}
+
+{% block content %}
+{% include 'partials/header.html' with title='My Site Title' %}
+
+
+
+<section>
+
+
+    <div class="grid-row">
+        <div class="grid-col-2"></div>
+        <div class="grid-col-8">
+
+            {% include 'partials/alert.html' with heading="Hello, Alerts!" message="If you see this text in an alert, it means that the Foundry template is working correctly." style="success" %}
+
+            <h1>Form Example</h1>
+
+            <form class="usa-form usa-form--large margin-bottom-3">
+                <fieldset class="usa-fieldset">
+                <legend class="usa-legend usa-legend--large">Name</legend>
+                <label class="usa-label" for="given-name">First or given name</label>
+                <div class="usa-hint" id="gnHint">For example, Jose, Darren, or Mai</div>
+                <input
+                    class="usa-input usa-input--xl"
+                    id="given-name"
+                    name="first-name"
+                    aria-describedby="gnHint"
+                />
+                <label class="usa-label" for="middle-name">Middle name</label>
+                <input
+                    class="usa-input usa-input--xl"
+                    id="middle-name"
+                    name="middle-name"
+                />
+                <label class="usa-label" for="family-name">Last or family name</label>
+                <div class="usa-hint" id="lnHint">
+                    For example, Martinez Gonzalez, Gu, or Smith
+                </div>
+                <input
+                    class="usa-input usa-input--xl"
+                    id="family-name"
+                    name="last-name"
+                    aria-describedby="lnHint"
+                />
+                </fieldset>
+
+
+                <h3 class="site-preview-heading">Upload File</h3>
+                <div class="usa-form-group">
+                  <label class="usa-label" for="file-input-specific"
+                    >Input accepts only specific file types</label
+                  >
+                  <span class="usa-hint" id="file-input-specific-hint"
+                    >Select XLSX files</span
+                  >
+                  <input
+                    id="file-input-specific"
+                    class="usa-file-input"
+                    type="file"
+                    name="file-input-specific"
+                    aria-describedby="file-input-specific-hint"
+                    accept=".pdf,.txt,.xlsx"
+                    multiple="multiple"
+                  />
+                </div>
+
+
+                <input class="usa-button" type="submit" value="Submit" />
+            </form>
+
+
+        </div>
+        <div class="grid-col-2"></div>
+    </div>
+</section>
+
+
+{% endblock content %}
